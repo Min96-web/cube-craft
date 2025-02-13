@@ -3,7 +3,12 @@ guid: 73ed9e84074504ff29e55c0bccc066a0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - armchairPrefab: {fileID: 5086014867196869709, guid: 5a796124cc42c4f468c613c5b15533aa, type: 3}
+  - bookcasePrefab: {fileID: 3287956286096186922, guid: 6809db93f01fb440692f6057f4631c7b, type: 3}
+  - coffeeTablePrefab: {fileID: 3944787529502593083, guid: ea94bd81958de4dbf88ee55594311eb8, type: 3}
+  - plant1Prefab: {fileID: 5317389256456420244, guid: 1f72016fcf61f4cec9d41817d6773e46, type: 3}
+  - plant2Prefab: {fileID: 7341054756049499331, guid: fdcf16f04e9944c6696bb0f54616274e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
