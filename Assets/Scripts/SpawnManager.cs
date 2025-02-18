@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject[] furniture;
-    //public GameObject armchairPrefab;
+    public static SpawnManager Instance;
 
-    //public GameObject bookcasePrefab;
+    //public List<GameObject> furniturePrefabs;
+    //public GameObject[] furniture;
+    public GameObject armchairPrefab;
 
-    //public GameObject coffeeTablePrefab;
+    public GameObject bookcasePrefab;
+
+    public GameObject coffeeTablePrefab;
 
     //public GameObject plant1Prefab;
 
@@ -29,14 +33,27 @@ public class SpawnManager : MonoBehaviour
     {
     }
 
-
-    public void SpawnFurniture(int furnitureIndex)
+    public void SpawnArmchair()
     {
-        //Instantiate(armchairPrefab, SpawnPosition, armchairPrefab.transform.rotation);
-        //Instantiate(bookcasePrefab, SpawnPosition, bookcasePrefab.transform.rotation);
-        //Instantiate(coffeeTablePrefab, SpawnPosition, coffeeTablePrefab.transform.rotation);
-        //Instantiate(plant1Prefab, SpawnPosition, plant1Prefab.transform.rotation);
-        //Instantiate(plant2Prefab, SpawnPosition, plant2Prefab.transform.rotation);
-        Instantiate(furniture[furnitureIndex], SpawnPosition, furniture[furnitureIndex].transform.rotation);
+        Instantiate(armchairPrefab, SpawnPosition, Quaternion.identity);
     }
+    public void SpawnBookCase()
+    {
+        Instantiate(bookcasePrefab, SpawnPosition, Quaternion.identity);
+    }
+
+    public void SpawnCoffeeTable()
+    {
+        Instantiate(coffeeTablePrefab, SpawnPosition, Quaternion.identity);
+    }
+    //public void SpawnFurniture(int furnitureIndex)
+    //{
+        //if (furnitureIndex < 0 || furnitureIndex >= furniturePrefabs.Count)
+        //{
+            //Debug.LogWarning("Invalid furniture index!");
+            //return;
+        //}
+        
+        //GameObject furniture = Instantiate(furniturePrefabs[furnitureIndex], SpawnPosition, Quaternion.identity);
+    //}
 }
